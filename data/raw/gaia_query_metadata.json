@@ -1,0 +1,13 @@
+{
+  "actual_query_top": 20000,
+  "gaia_data_release": "gaiadr3",
+  "quality_filters": {
+    "max_ruwe": 1.4,
+    "min_parallax_over_error": 5.0,
+    "parallax_positive": true,
+    "valid_bp_rp": true
+  },
+  "query": "\n    SELECT TOP 20000\n        gs.source_id,\n        gs.ra,\n        gs.dec,\n        gs.l,\n        gs.b,\n        gs.parallax,\n        gs.parallax_error,\n        gs.phot_g_mean_mag,\n        gs.bp_rp,\n        gs.ruwe,\n        gs.ag_gspphot\n    FROM gaiadr3.vari_summary AS vs\n    JOIN gaiadr3.gaia_source AS gs\n        ON vs.source_id = gs.source_id\n    WHERE \n        gs.parallax > 0\n        AND gs.parallax_error IS NOT NULL\n        AND gs.parallax / gs.parallax_error >= 5.0\n        AND gs.bp_rp IS NOT NULL\n        AND gs.phot_g_mean_mag IS NOT NULL\n        AND gs.ruwe IS NOT NULL\n        AND gs.ruwe < 1.4\n    \n    ",
+  "query_utc": "2026-06-01T19:03:40+00:00",
+  "requested_sample_size": 20000
+}

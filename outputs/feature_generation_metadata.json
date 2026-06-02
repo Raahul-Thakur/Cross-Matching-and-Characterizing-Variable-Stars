@@ -1,0 +1,9 @@
+{
+  "absolute_magnitude_formula": "M_G = G + 5 * log10(parallax_mas) - 10 - A_G",
+  "crossmatch_radius_arcsec": 2.0,
+  "feature_mode": "lightcurve_with_catalog_fallback",
+  "feature_table": "C:\\Users\\rahul\\Desktop\\Series Work\\cross matching and characterizing variable stars in gaia\\data\\interim\\variable_star_features.csv",
+  "lightcurve_source": "skypatrol",
+  "max_lightcurves": 100,
+  "uses_catalog_period_as_training_feature": false
+}

@@ -27,8 +27,7 @@ data/lightcurves/*
 # Generated/intermediate outputs
 data/interim/*
 !data/interim/.gitkeep
-outputs/*
-!outputs/.gitkeep
+
 
 # Keep small bundled fixtures
 !data/test/
