@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE/local files
+.idea/
+.vscode/
+.DS_Store
+
+# Large/raw downloaded data
+data/raw/*
+!data/raw/.gitkeep
+
+# Cached ASAS-SN Sky Patrol light curves
+data/lightcurves/*
+!data/lightcurves/.gitkeep
+
+# Generated/intermediate outputs
+data/interim/*
+!data/interim/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# Keep small bundled fixtures
+!data/test/
+!data/test/**
+
+# Optional local notebooks/checkpoints
+.ipynb_checkpoints/
